@@ -67,7 +67,7 @@ uart:
   baud_rate: 4800
 
 #------- 是否开启DEBUG模式，logger的level需至少设置为DEBUG -------
-$\#debug:
+#debug:
 
 #-------打印log设置，注意实际输出端口为主板上面的log_tx，而不是刷机用到的tx-------
 logger:
