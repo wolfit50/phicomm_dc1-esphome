@@ -16,7 +16,7 @@ substitutions:
   #WiFi离线多久后重启设备，秒s/分钟min/小时h，不需要此功能设置为0s，建议设置0s，防止异常重启，或者设置的大一些
   wifi_reboot_timeout: 15min
   #与API服务端失去连接多久后重启设备，秒s/分钟min/小时h，不需要此功能设置为0s，建议设置0s，防止异常重启，或者设置的大一些
-  api_reboot_timeout: 15min
+  api_reboot_timeout: 0s
   #电量统计的数据刷新时间（内部刷新时间，非上报周期），秒s/分钟min/小时h
   cse7766_update_interval: 10s
 
@@ -39,7 +39,7 @@ captive_portal:
 
 #---------不使用api与设备连接的话删除api配置---------
 api:
-  #reboot_timeout: $api_reboot_timeout
+  reboot_timeout: $api_reboot_timeout
 #----------------------------------------------------
 
 #------- OTA 空中升级配置 -------
@@ -73,7 +73,7 @@ uart:
 logger:
   #不同的log等级看到的信息详细程度不一样，信息量从少到多依次为
   # NONE、ERROR、WARN、INFO、DEBUG、VERBOSE、VERY_VERBOSE
-  level: INFO
+  level: WARN
   #设置为0关闭通过UART的log输出
   baud_rate: 0
   #通过TTL看log信息，取消注释下面这行，读取接口为RX1，具体见模组接口说明图
