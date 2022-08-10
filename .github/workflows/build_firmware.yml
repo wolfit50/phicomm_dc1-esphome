@@ -14,7 +14,7 @@ on:
 
 jobs:
   build:
-    runs-on: ubuntu-22.04
+    runs-on: ubuntu-20.04
 
     steps:
     - name: Checkout
@@ -27,7 +27,7 @@ jobs:
         name: bin_output_path::/home/runner/work/bin/
       run: |
         pip3 install setuptools wheel
-        pip3 install esphome==1.16.0
+        pip3 install esphome==1.20.0
 
     - name: Prepare driver
       env:
