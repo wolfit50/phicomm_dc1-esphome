@@ -3,7 +3,7 @@ esphome:
   platform: ESP8266
   board: esp01_1m
   #断电记忆，恢复上次的状态
-  esp8266_restore_from_flash: yes
+  esp8266_restore_from_flash: false
 
 #------- 一些自定义的配置，一般情况下只需要改这下面的内容 -------
 
